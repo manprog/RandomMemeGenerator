@@ -5,14 +5,41 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Actions</h1>
-        <h2 id="clickFunction">Please click a button!</h2>
-        <button onclick="showMeme()">Show a Meme</button>
-        <button onclick="showJoke()">Tell me a Joke</button>
-        <button onclick="showRandomQuote()">Random Quote</button>
-        <button id="riddleMe" onclick="showRiddle()">Riddle Me</button>
-        <button id="revealRiddleAnswer" onclick="revealRiddle()">Reveal Riddle Answer</button>
-        <button id="clear" onclick="clearEverything()">CLEAR EVERYTHING</button>
+        <section id="outputSection">
+
+            <h1>Output</h1>
+            <h3>Memes</h3>
+            <div id="memeOutput">
+                
+            </div>
+
+            <h3>Jokes</h3>
+            <div id="jokeOutput">
+                
+            </div>
+
+            <h3>Quote</h3>
+            <div id="quoteOutput">
+
+            </div>
+
+            <h3>Riddle</h3>
+            <div id="riddleOutput">
+
+            </div>
+
+        </section>
+        
+        <section id="clickSection">
+            <h1>Actions</h1>
+            <h2 id="clickFunction">Please click a button!</h2>
+            <button onclick="showMeme()">Show a Meme</button>
+            <button onclick="showJoke()">Tell me a Joke</button>
+            <button onclick="showQuote()">Random Quote</button>
+            <button id="riddleMe" onclick="showRiddle()">Riddle Me</button>
+            <button id="revealRiddleAnswer" onclick="revealRiddle()">Reveal Riddle Answer</button>
+            <button id="clear" onclick="clearEverything()">CLEAR EVERYTHING</button>
+        </section>
     </body>
     <script src="script.js"></script>
 </html>

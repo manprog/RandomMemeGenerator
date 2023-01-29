@@ -1,10 +1,52 @@
+const showMeme = ()=>{
+    clearEverything();
+    document.getElementById("memeOutput").innerHTML = "MEME SHOWED";
+}
+
+const showJoke = ()=>{
+    clearEverything();
+    const joke = document.createElement('p');
+    joke.textContent = getRandomData("jokes");
+    document.getElementById("jokeOutput").appendChild(joke);
+}
+
+const showQuote = ()=>{
+    clearEverything();
+    const quote = document.createElement('p');
+    const author = document.createElement('p');
+
+    const quoteWithAuthor = getRandomData("quotes");
+    quote.textContent = quoteWithAuthor['quote'];
+    author.textContent = `- ${quoteWithAuthor['author']}`;
+    document.getElementById("quoteOutput").appendChild(quote);
+    document.getElementById("quoteOutput").appendChild(author);
+}
+
 const showRiddle = ()=>{
-    const riddleButton = document.getElementById("clickFunction");
-    riddleButton.innerHTML = "Riddle me was clicked";
+    clearEverything();
+    const riddle = document.createElement('p');
+
+    const quoteWithAuthor = getRandomData("quotes");
+    quote.textContent = quoteWithAuthor['quote'];
+    author.textContent = `- ${quoteWithAuthor['author']}`;
+    document.getElementById("quoteOutput").appendChild(quote);
+    document.getElementById("quoteOutput").appendChild(author);
+}
+
+const revealRiddle = ()=>{
+    clearEverything();
+    const riddle = document.getElementById("riddleOutput");
+    if (riddle.textContent === ""){
+        alert("Please click 'Riddle Me' first");
+    }
+    return undefined    
 }
 
 function clearEverything (){
-    document.getElementById("clickFunction").innerHTML = "Please click a button!";
+    document.getElementById("memeOutput").innerHTML = "";
+    document.getElementById("jokeOutput").innerHTML = "";
+    document.getElementById("quoteOutput").innerHTML = "";
+    document.getElementById("riddleOutput").innerHTML = "";
 }
 
 
@@ -57,3 +99,7 @@ const data = {
   quotes,
   riddles
 };
+
+function getRandomData(type) {
+    return data[type][rn(data[type].length)];
+  }

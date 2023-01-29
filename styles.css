@@ -1,12 +1,32 @@
-html{
+body {
+    background-color: #1D2326;
+    font-family: monospace;
+    color: #BFA38A;
     display: flex;
     flex-direction: row;
+    justify-content:space-evenly;
+}
+
+#outputSection{
+    display: flex;
+    flex-direction: column;
+}
+
+#clickSection {
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+    border-left: 1px dotted #BFA38A;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 85vh;
 }
 
 button{
     background-color: transparent;
     color: #BFA38A;
-    border-radius: 15%;
+    margin: 10px;
+    padding: 10px;
 }
 button:hover{
     cursor: pointer;
@@ -19,13 +39,17 @@ button:hover{
     text-decoration: underline;
     font-style: italic;
     border: none;
+    padding: 0px;
 }
 
-body {
-    background-color: #1D2326;
-    font-family: monospace;
-    color: #BFA38A;
+#clear:hover{
+    background-color: rgb(117, 33, 33);
 }
+
+
+
+
+
 /* 
 NO ACTION REQUIRED BY YOU
 
